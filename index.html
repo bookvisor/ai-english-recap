@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>토요 영어 리캡 | AI 영어 선생</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Gowun+Dodum&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" aria-label="AI 영어 선생 홈">
+          <span class="brand-mark">A</span>
+          <span>AI 영어 선생</span>
+        </a>
+        <nav aria-label="주요 메뉴">
+          <a class="nav-item active" href="#dashboard"><span>⌂</span> 이번 주</a>
+          <a class="nav-item" href="#prep"><span>＋</span> 학습 준비</a>
+          <a class="nav-item" href="#report"><span>◫</span> 주간 리포트</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <p>매주 토요일</p>
+          <strong>30분의 작은 성장</strong>
+          <span>이번 주 배운 것을<br />내 것으로 만드는 시간</span>
+        </div>
+      </aside>
+
+      <main id="top">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">SATURDAY RECAP · WEEK 43</p>
+            <h1>이번 주, 무엇을<br /><em>내 것으로 만들까?</em></h1>
+          </div>
+          <div class="date-card"><span id="today"></span><b>토요일 복습</b></div>
+        </header>
+
+        <section id="dashboard" class="student-section">
+          <div class="section-heading">
+            <div><p class="eyebrow">CHOOSE A LEARNER</p><h2>오늘의 리캡 파트너</h2></div>
+            <p>학생을 선택하면 맞춤 난이도와 말투로 시작합니다.</p>
+          </div>
+          <div class="student-grid">
+            <button class="student-card selected" data-student="elementary">
+              <span class="status-dot"></span><span class="student-grade">ELEMENTARY 4</span>
+              <span class="student-name">초4 영어 탐험가</span>
+              <span class="student-summary">단어와 문장을 즐겁게 연결해요</span>
+              <span class="student-score">최근 평균 <b>95</b><small>점</small></span>
+              <span class="student-tag">게임형 리캡</span>
+            </button>
+            <button class="student-card" data-student="middle">
+              <span class="status-dot"></span><span class="student-grade">MIDDLE 2</span>
+              <span class="student-name">중2 영어 전략가</span>
+              <span class="student-summary">근거를 찾아 실수를 줄여요</span>
+              <span class="student-score">최근 평균 <b>92</b><small>점</small></span>
+              <span class="student-tag">논리형 리캡</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="recap-layout">
+          <article class="session-card">
+            <div class="session-top"><div><p class="eyebrow">TODAY'S SESSION</p><h2 id="sessionTitle">초4 영어 탐험가의 30분</h2></div><span class="duration">30 MIN</span></div>
+            <div class="timeline" id="timeline"></div>
+            <div class="coach-message" id="coachMessage">
+              <span class="coach-icon">✦</span>
+              <p><b>준비됐어?</b><br />이번 주 배운 내용 중 가장 기억나는 것부터 가볍게 말해 보자.</p>
+            </div>
+            <div class="session-actions">
+              <button class="secondary-btn" id="resetSession">처음부터</button>
+              <button class="primary-btn" id="startSession">리캡 시작하기 <span>→</span></button>
+            </div>
+          </article>
+          <aside class="focus-card">
+            <p class="eyebrow">THIS WEEK'S FOCUS</p>
+            <h3 id="focusTitle">음식과 취향</h3>
+            <div class="focus-line"></div>
+            <p id="focusText">단어를 문장으로 말하고, 좋아하는 음식을 설명해 봐요.</p>
+            <div class="focus-stat"><span>지난 복습</span><b>완료 3회</b></div>
+            <div class="focus-stat"><span>다시 볼 것</span><b id="reviewCount">3개</b></div>
+          </aside>
+        </section>
+
+        <section id="prep" class="prep-section">
+          <div class="section-heading compact"><div><p class="eyebrow">FRIDAY PREP</p><h2>이번 주 배움, 담아두기</h2></div><p>금요일에 2분만 입력하면 토요일 리캡이 훨씬 정확해집니다.</p></div>
+          <form id="studyForm" class="study-form">
+            <label>이번 주 단원<input id="unit" value="음식과 취향" placeholder="예: Lesson 7 · 음식과 취향" /></label>
+            <label>핵심 단어 <small>쉼표로 구분</small><textarea id="words" rows="2" placeholder="예: delicious, hungry, favorite">delicious, hungry, favorite, menu</textarea></label>
+            <label>문법 또는 문장 패턴<textarea id="grammar" rows="2" placeholder="예: I like ~ because ...">I like ~ because ...</textarea></label>
+            <label>어려웠던 점<textarea id="difficulty" rows="2" placeholder="예: favorite 철자를 자주 헷갈려요">favorite 철자를 자주 헷갈려요</textarea></label>
+            <button class="save-btn" type="submit">이번 주 자료 저장하기</button>
+          </form>
+        </section>
+
+        <section id="report" class="report-section">
+          <div class="section-heading compact"><div><p class="eyebrow">PARENT NOTE</p><h2>부모님께 드리는 한 장 요약</h2></div><button class="text-btn" id="copyReport">요약 복사</button></div>
+          <div class="report-card">
+            <div class="report-main"><p class="report-label" id="reportStudent">초4 영어 탐험가 · 이번 주</p><h3 id="reportHeadline">문장으로 표현하는 힘이 좋아지고 있어요.</h3><p id="reportText">단어 뜻을 잘 기억하고 있으며, 좋아하는 음식을 설명하는 문장을 자연스럽게 만들었습니다. 철자가 헷갈린 단어만 짧게 다시 확인해 주세요.</p></div>
+            <div class="report-pills"><span>잘한 점 <b id="strength">문장 만들기</b></span><span>다시 보기 <b id="weakness">favorite 철자</b></span><span>다음 미션 <b id="mission">5분 단어 카드</b></span></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="sessionDialog">
+      <div class="dialog-top"><p class="eyebrow" id="dialogLabel">RECAP IN PROGRESS</p><button id="closeDialog" aria-label="닫기">×</button></div>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <p class="question-number" id="questionNumber">01 / 04</p>
+      <h2 id="question"></h2>
+      <div id="answers" class="answers"></div>
+      <p id="hint" class="hint"></p>
+      <div class="dialog-footer"><span id="feedback"></span><button class="primary-btn" id="nextQuestion" disabled>다음 <span>→</span></button></div>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
